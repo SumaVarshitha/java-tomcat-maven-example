@@ -8,9 +8,9 @@ pipeline {
         stage('build') {
             
 		   agent {
-			   docker { image 'sumavarshitha/java-tomcat-maven-example' }}
+			   docker { image 'sumavarshitha/java-maven-node' }}
 		steps {
-			sh 'rm -rf assessmentdocker' 
+			sh 'rm -rf java-tomcat-maven-example' 
 	        sh 'git clone https://github.com/SumaVarshitha/java-tomcat-maven-example.git'
                 sh "mvn clean package"
             
